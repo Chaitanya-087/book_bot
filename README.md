@@ -1,4 +1,4 @@
-# IPL Ticket Booking Bot
+# Booking Bot
 
 Automates IPL ticket booking on [district.in](https://www.district.in) using Robot Framework and Selenium. Opens Brave Browser with your saved session and clicks **Book Tickets** the instant it becomes available.
 
