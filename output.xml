@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on darwin)" generated="2026-05-06T15:25:33.866022" rpa="false" schemaversion="5">
+<suite id="s1" name="Book Tickets" source="/Users/chaitanya/Develop/automation/ipl_tickets/tests/book_tickets.robot">
+<test id="s1-t1" name="Auto Book IPL Ticket" line="9">
+<kw name="Open Browser With Saved Session" owner="keywords">
+<kw name="Open Chrome Session" owner="BrowserSetup">
+<doc>Opens Brave with existing user session. Optimised for zero-lag booking.</doc>
+<status status="PASS" start="2026-05-06T15:25:33.942129" elapsed="7.115537"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-06T15:25:41.058241" elapsed="0.282995"/>
+</kw>
+<status status="PASS" start="2026-05-06T15:25:33.941848" elapsed="7.399473"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-05-06T15:25:41.341530" level="INFO">Opening url 'https://www.district.in/events/tata-ipl-2026-match-49--sunrisers-hyderabad-vs-punjab-kings-buy-tickets'</msg>
+<arg>${MATCHURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-05-06T15:25:41.341410" elapsed="0.754673"/>
+</kw>
+<kw name="Click When Available" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>error=Book Tickets button never appeared within ${timeout}s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-06T15:25:42.096695" elapsed="0.030232"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-05-06T15:25:42.127441" level="INFO">Executing JavaScript:
+document.querySelector("[aria-label='Book Tickets']").click()
+Without any arguments.</msg>
+<arg>document.querySelector("[aria-label='Book Tickets']").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-05-06T15:25:42.127045" elapsed="0.004071"/>
+</kw>
+<arg>xpath=//button[@aria-label='Book Tickets']</arg>
+<arg>timeout=600</arg>
+<doc>Polls every 100ms and clicks the instant the element is available.</doc>
+<status status="PASS" start="2026-05-06T15:25:42.096436" elapsed="0.034782"/>
+</kw>
+<status status="PASS" start="2026-05-06T15:25:33.941609" elapsed="8.189702"/>
+</test>
+<status status="PASS" start="2026-05-06T15:25:33.866467" elapsed="8.265197"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Book Tickets" id="s1" pass="1" fail="0" skip="0">Book Tickets</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-05-06T15:25:33.940899" level="WARN">Error in file '/Users/chaitanya/Develop/automation/ipl_tickets/resources/keywords.robot' on line 2: Suite 'Book Tickets' has already imported library 'SeleniumLibrary' with different arguments. This import is ignored.</msg>
+</errors>
+</robot>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on darwin)" generated="2026-05-06T15:29:47.742735" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation" source="/Users/chaitanya/Develop/automation">
+<suite id="s1-s1" name="Ipl Tickets" source="/Users/chaitanya/Develop/automation/ipl_tickets">
+<suite id="s1-s1-s1" name="Tests" source="/Users/chaitanya/Develop/automation/ipl_tickets/tests">
+<suite id="s1-s1-s1-s1" name="Book Tickets" source="/Users/chaitanya/Develop/automation/ipl_tickets/tests/book_tickets.robot">
+<test id="s1-s1-s1-s1-t1" name="Auto Book IPL Ticket" line="8">
+<kw name="Open Browser With Saved Session" owner="keywords">
+<kw name="Open Chrome Session" owner="BrowserSetup">
+<doc>Opens Brave with existing user session. Optimised for zero-lag booking.</doc>
+<status status="PASS" start="2026-05-06T15:29:47.836901" elapsed="21.012067"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-06T15:30:08.849847" elapsed="0.058852"/>
+</kw>
+<status status="PASS" start="2026-05-06T15:29:47.836538" elapsed="21.072990"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-05-06T15:30:08.910564" level="INFO">Opening url 'https://www.district.in/events/tata-ipl-2026-match-49--sunrisers-hyderabad-vs-punjab-kings-buy-tickets'</msg>
+<arg>${MATCHURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-05-06T15:30:08.910005" elapsed="0.584159"/>
+</kw>
+<kw name="Click When Available" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-06T15:30:09.495380" elapsed="0.046018"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-05-06T15:30:09.542280" level="INFO">Executing JavaScript:
+document.querySelector("[aria-label='Book Tickets']").click()
+Without any arguments.</msg>
+<arg>document.querySelector("[aria-label='Book Tickets']").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-05-06T15:30:09.541653" elapsed="1.210992"/>
+</kw>
+<arg>xpath=//button[@aria-label='Book Tickets']</arg>
+<arg>timeout=600</arg>
+<doc>Polls and clicks the instant the element appears.</doc>
+<status status="PASS" start="2026-05-06T15:30:09.494846" elapsed="1.257974"/>
+</kw>
+<status status="PASS" start="2026-05-06T15:29:47.835503" elapsed="22.917608"/>
+</test>
+<status status="PASS" start="2026-05-06T15:29:47.771275" elapsed="22.985336"/>
+</suite>
+<status status="PASS" start="2026-05-06T15:29:47.770239" elapsed="22.988156"/>
+</suite>
+<status status="PASS" start="2026-05-06T15:29:47.769002" elapsed="22.990959"/>
+</suite>
+<status status="PASS" start="2026-05-06T15:29:47.745691" elapsed="23.015603"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Automation" id="s1" pass="1" fail="0" skip="0">Automation</stat>
+<stat name="Ipl Tickets" id="s1-s1" pass="1" fail="0" skip="0">Automation.Ipl Tickets</stat>
+<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">Automation.Ipl Tickets.Tests</stat>
+<stat name="Book Tickets" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Automation.Ipl Tickets.Tests.Book Tickets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
